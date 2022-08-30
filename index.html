@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c72fbd3cfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/sidenav.css" />
+    <link rel="stylesheet" href="css/video.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link
+      rel="shortcut icon"
+      href="img/others/favicon.png"
+      type="image/x-icon"
+    />
+    <title>YouTube</title>
+  </head>
+  <body>
+    <header>
+      <section class="menu-icon-wrap">
+        <div class="hamburger material-symbols-outlined">menu</div>
+        <div class="youtube-logo">
+          <img src="img/others/youtube-logo.png" alt="YouTube Logo" />
+        </div>
+      </section>
+      <section class="searchbar-mic-wrap">
+        <div id="searchbar" class="search-bar">
+          <div
+            id="searchicohidden"
+            class="search-hidden hiddenico material-symbols-outlined"
+          >
+            Search
+          </div>
+          <input type="text" name="" id="inputsearch" placeholder="Search" />
+          <div
+            id="crossicohidden"
+            class="cross-hidden hiddenico material-symbols-outlined"
+          >
+            add
+          </div>
+          <div id="searchiconbox" class="search-icon material-symbols-outlined">
+            Search
+            <div class="tooltip search-tooltip">Search</div>
+          </div>
+        </div>
+        <div class="mic material-symbols-outlined">
+          mic
+          <div class="tooltip mic-tooltip">Search with your voice</div>
+        </div>
+      </section>
+      <section class="header-controls">
+        <div class="controls material-symbols-outlined create-control">
+          video_call
+          <div class="tooltip create-tooltip">Create</div>
+        </div>
+        <div class="controls material-symbols-outlined cast-control">cast</div>
+        <div class="controls material-symbols-outlined">
+          notifications
+          <div class="tooltip notification-tooltip">Notifications</div>
+        </div>
+        <div class="controls material-symbols-outlined search-control">
+          search
+        </div>
+        <div class="profile-img">
+          <img src="img/others/profile_pfp.jpg" alt="" />
+        </div>
+      </section>
+    </header>
+
+    <section class="interests">
+      <div class="interests-wrap">
+        <div
+          class="explore-interest material-symbols-outlined default-interest"
+        >
+          explore<span class="explore-interest-text">Explore</span>
+        </div>
+        <div class="interest-cards selected-interest default-interest">All</div>
+        <div class="interest-cards">Gaming</div>
+        <div class="interest-cards">Podcats</div>
+        <div class="interest-cards">Computer Science</div>
+        <div class="interest-cards">Physics</div>
+        <div class="interest-cards">Calculus</div>
+        <div class="interest-cards">Hollywood</div>
+        <div class="interest-cards">Rock</div>
+        <div class="interest-cards">Accountancy</div>
+        <div class="interest-cards">Lifestyle</div>
+        <div class="interest-cards">Entertainment</div>
+        <div class="interest-cards">Classics</div>
+        <div class="interest-cards">Food</div>
+        <div class="interest-cards">Vlog</div>
+        <div class="interest-cards">Comedy</div>
+        <div class="interest-cards">Fashion</div>
+        <div class="interest-cards">NEET</div>
+        <div class="interest-cards">JEE</div>
+        <div class="interest-cards">Apple</div>
+        <div class="interest-cards">Recently Uploaded</div>
+      </div>
+    </section>
+
+    <nav class="sidenav">
+      <section class="sidenavs">
+        <div class="material-symbols-rounded sidenav-icon default-sidenav">
+          home
+          <p class="sidenav-text">Home</p>
+        </div>
+      </section>
+      <section class="sidenavs explore-sidenav">
+        <div class="material-symbols-outlined sidenav-icon">
+          explore
+          <p class="sidenav-text">Explore</p>
+        </div>
+      </section>
+      <section class="sidenavs">
+        <div class="material-symbols-outlined sidenav-icon">
+          movie_filter
+          <p class="sidenav-text">Shorts</p>
+        </div>
+      </section>
+      <section class="sidenavs create-sidenav">
+        <div class="material-symbols-outlined sidenav-icon create-sidenav-icon">
+          add_circle
+        </div>
+      </section>
+      <section class="sidenavs">
+        <div
+          class="material-symbols-outlined sidenav-icon subscriptions-sidenav"
+        >
+          smart_display
+          <p class="sidenav-text">Subscriptions</p>
+        </div>
+      </section>
+      <section class="sidenavs library-sidenav">
+        <div class="material-symbols-outlined sidenav-icon">
+          video_library
+          <p class="sidenav-text">Library</p>
+        </div>
+      </section>
+      <section class="sidenavs originals-sidenav">
+        <div class="material-symbols-outlined sidenav-icon">
+          movie
+          <p class="sidenav-text">Originals</p>
+        </div>
+      </section>
+      <section class="sidenavs ytmusic-sidenav">
+        <div class="material-symbols-outlined sidenav-icon">
+          play_circle
+          <p class="sidenav-text">Youtube Music</p>
+        </div>
+      </section>
+      <section class="sidenavs playlist-sidenav">
+        <div class="material-symbols-outlined sidenav-icon">
+          featured_play_list
+          <p class="sidenav-text">Playlist</p>
+        </div>
+      </section>
+      <section class="sidenavs download-sidenav">
+        <div class="material-symbols-outlined sidenav-icon">
+          download
+          <p class="sidenav-text">Download</p>
+        </div>
+      </section>
+    </nav>
+
+    <section id="splash-screen">
+      <div id="splash-logo">
+        <img src="img/others/youtube-icon.jpg" alt="" />
+      </div>
+    </section>
+
+    <main>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+      <section class="video-card">
+        <div class="video-preview">
+          <img class="video-previewimg" alt="" />
+          <span class="video-duration"></span>
+        </div>
+        <div class="video-details">
+          <div class="channel-logo">
+            <img class="channel-logoimg" alt="" />
+          </div>
+          <div class="video-info">
+            <p class="video-title"></p>
+            <div class="video-name-stats-wrap">
+              <span class="channel-name"></span>
+              <div class="video-stats-wrap">
+                <pre class="mobile-middot"> &middot; </pre>
+                <span class="video-views"></span>
+                <pre class="global-middot"> &middot; </pre>
+                <span class="video-date"></span>
+              </div>
+            </div>
+          </div>
+          <div class="more-info material-symbols-rounded">more_vert</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/video.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

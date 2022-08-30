@@ -1,0 +1,254 @@
+/* All Media Breakpoints */
+
+/* 1550px to 3000px */
+
+@media (min-width: 1550px) and (max-width: 3000px) {
+	main {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	}
+
+	.video-card {
+		max-width: 500px;
+	}
+}
+
+/* 1100px */
+
+@media (max-width: 1100px) {
+	main {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+/* 1000px */
+
+@media (max-width: 1000px) {
+	.search-bar input {
+		width: 200px;
+	}
+}
+
+/* 900px */
+
+@media (max-width: 900px) {
+	.sidenav {
+		display: none;
+	}
+
+	main {
+		margin-left: 0px;
+	}
+
+	.interests {
+		left: 0px;
+		top: 48px;
+	}
+
+	.searchbar-mic-wrap {
+		display: none;
+	}
+
+	.search-control {
+		display: flex;
+	}
+}
+
+/* 850px */
+
+@media (max-width: 850px) {
+	main {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.video-card {
+		max-width: 400px;
+	}
+}
+
+/* 550px */
+
+@media (max-width: 550px) {
+	header {
+		background-color: rgba(33, 33, 33, 1);
+		padding: 14px 10px;
+		border-bottom: none;
+	}
+
+	.tooltip {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.youtube-logo img {
+		left: -22px;
+	}
+
+	.header-controls {
+		flex-grow: 0;
+		margin-right: 14px;
+	}
+
+	.create-control {
+		display: none;
+	}
+
+	.controls {
+		margin-right: 22px;
+	}
+
+	.cast-control,
+	.search-control {
+		display: flex;
+	}
+
+	.profile-img {
+		margin: 0px -2px;
+	}
+
+	.profile-img img {
+		width: 28px;
+	}
+
+	.interests {
+		background-color: rgba(33, 33, 33, 1);
+		padding: 10px 0px;
+		padding-top: 4px;
+		border-bottom: none;
+		top: 55px;
+	}
+
+	.interest-cards {
+		padding: 7px 14px;
+		font-size: 13px;
+	}
+
+	.default-interest {
+		margin-left: 16px;
+	}
+
+	.explore-interest {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 4px 10px;
+		color: rgb(255, 255, 255, 0.98);
+		font-size: 24px;
+		background-color: rgb(255, 255, 255, 0.2);
+		border-radius: 4px;
+	}
+
+	.explore-interest-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+		font-size: 14px;
+		font-weight: 500;
+		text-align: center;
+		margin-top: 2px;
+		color: rgb(255, 255, 255, 0.98);
+		margin-left: 4px;
+	}
+
+	.sidenav {
+		display: flex;
+		bottom: 0px;
+		top: unset;
+		left: 0px;
+		right: 0px;
+		flex-direction: row;
+		justify-content: space-between;
+		width: auto;
+		padding: 2px 26px;
+		padding-bottom: 6px;
+	}
+
+	.sidenav-icon {
+		padding: 4px 0px;
+		font-size: 26px;
+	}
+
+	.sidenav-text {
+		font-size: 10px;
+		margin-top: 4px;
+	}
+
+	.default-sidenav {
+		padding: 0px;
+	}
+
+	.download-sidenav,
+	.playlist-sidenav,
+	.ytmusic-sidenav,
+	.originals-sidenav,
+	.explore-sidenav {
+		display: none;
+	}
+
+	.create-sidenav {
+		display: flex;
+		margin: 0px -12px;
+	}
+
+	.create-sidenav-icon {
+		font-size: 36px;
+	}
+
+	.subscriptions-sidenav {
+		margin: 0px -14px;
+	}
+
+	main {
+		grid-template-columns: 1fr;
+		padding: 0px 0px;
+		padding-bottom: 80px;
+		row-gap: 6px;
+	}
+
+	.video-details {
+		margin-left: 10px;
+	}
+
+	.video-card {
+		max-width: 550px;
+	}
+
+	.video-name-stats-wrap {
+		flex-direction: row;
+		align-items: center;
+		margin-top: 2px;
+	}
+
+	.channel-name,
+	.video-stats-wrap {
+		margin: 0px;
+	}
+
+	.more-info {
+		display: flex;
+		flex-grow: 1;
+		justify-content: center;
+		margin-right: 2px;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		text-align: center;
+		align-items: center;
+		vertical-align: middle;
+		border: 1px solid transparent;
+		transition: 0.5s;
+	}
+
+	.more-info:active {
+		background-color: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.mobile-middot {
+		display: inline-flex;
+	}
+}

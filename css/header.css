@@ -1,0 +1,271 @@
+/* Header Styles */
+
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: var(--dark-bgcolor-header);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	z-index: 6;
+}
+
+.hamburger {
+	cursor: pointer;
+	width: 34px;
+	text-align: center;
+	height: 34px;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	vertical-align: middle;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	transition: 0.5s;
+}
+
+.hamburger:active {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-icon-wrap,
+.header-controls {
+	flex-grow: 1;
+}
+
+.menu-icon-wrap,
+.searchbar-mic-wrap,
+.header-controls {
+	display: flex;
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.header-controls {
+	justify-content: flex-end;
+}
+
+.youtube-logo {
+	display: flex;
+	margin-left: 16px;
+	position: relative;
+	width: 100px;
+}
+
+.youtube-logo img {
+	position: absolute;
+	width: 124px;
+	top: -42px;
+	left: -8px;
+	cursor: pointer;
+}
+
+.search-bar {
+	display: flex;
+	background-color: rgb(24, 24, 24);
+	padding: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	position: relative;
+	cursor: default;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.hiddenico {
+	display: none;
+	font-size: 20px;
+	position: absolute;
+	left: 10px;
+	top: 9px;
+	color: rgba(255, 255, 255, 0.9);
+	align-items: center;
+	font-weight: 200;
+}
+
+.cross-hidden {
+	right: 66px;
+	top: 7px;
+	left: unset;
+	transform: rotate(45deg);
+	font-size: 26px;
+}
+
+.search-bar input {
+	width: 440px;
+	background: transparent;
+	outline: none;
+	border: none;
+	cursor: text;
+	padding-right: 84px;
+	font-size: 16px;
+}
+
+.search-bar input::placeholder {
+	font-size: 16px;
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 400;
+}
+
+.search-icon {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: rgb(56, 56, 56);
+	right: -1px;
+	top: -1px;
+	bottom: -1px;
+	padding: 0px 18px;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.mic {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-left: 10px;
+	border-radius: 50px;
+	background-color: rgb(12, 12, 12);
+	font-size: 24px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.tooltip {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	position: absolute;
+	font-size: 13px;
+	bottom: -54px;
+	left: 0px;
+	padding: 10px;
+	border-radius: 2px;
+	background-color: rgba(130, 130, 130, 0.9);
+	transition: 0.4s;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.mic-tooltip {
+	left: -44px;
+}
+
+.create-tooltip {
+	left: -16px;
+	bottom: -62px;
+}
+
+.notification-tooltip {
+	bottom: -62px;
+	left: -30px;
+}
+
+.search-icon:hover .tooltip,
+.mic:hover .tooltip,
+.controls:hover .tooltip {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	transition: 0.4s;
+}
+
+.header-controls {
+	margin-right: 20px;
+}
+
+.controls {
+	position: relative;
+	font-size: 24px;
+	margin-right: 26px;
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.cast-control,
+.search-control {
+	display: none;
+}
+
+.profile-img {
+	display: flex;
+	margin-left: 8px;
+	cursor: pointer;
+}
+
+.profile-img img {
+	width: 32px;
+	border-radius: 17px;
+}
+
+/* Header Sticky || Interest */
+
+.interests {
+	position: fixed;
+	top: 53px;
+	left: 76px;
+	right: 0px;
+	background-color: var(--dark-bgcolor-header);
+	padding: 10px 0px;
+	display: flex;
+	align-items: center;
+	z-index: 5;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.interests-wrap {
+	display: flex;
+	overflow-x: scroll;
+	align-items: center;
+}
+
+.interests-wrap::-webkit-scrollbar {
+	width: 0;
+	height: 0;
+}
+
+.interest-cards {
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 6px 14px;
+	color: white;
+	border-radius: 19px;
+	font-size: 14px;
+	margin-right: 10px;
+	white-space: nowrap;
+	transition: 0.4s;
+	cursor: pointer;
+	user-select: none;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.default-interest {
+	margin-left: 24px;
+}
+
+.explore-interest {
+	display: none;
+}
+
+
+.interest-cards:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.selected-interest {
+	background-color: rgb(255, 255, 255);
+	color: black;
+}
+
+.selected-interest:hover {
+	background-color: rgb(255, 255, 255);
+
+}
