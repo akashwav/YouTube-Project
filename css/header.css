@@ -200,6 +200,8 @@ header {
 	display: flex;
 	margin-left: 8px;
 	cursor: pointer;
+	width: 32px;
+	overflow: none;
 }
 
 .profile-img img {
