@@ -8,7 +8,8 @@ let videos = [
 	channeName: "Marques Brownlee",
 	videoViews: "5.8M views",
 	videoDate: "6 months ago",
-	videoDuration: "13:34"
+	videoDuration: "13:34",
+	channelVerification: "check_circle"
 }, 
 {
 	videoPreview: "img/video-previews/farenheit-veritasium.jpg",
@@ -17,7 +18,8 @@ let videos = [
 	channeName: "Veritasium",
 	videoViews: "5.1M views",
 	videoDate: "5 years ago",
-	videoDuration: "5:24"
+	videoDuration: "5:24",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/how_does_the_internet_work.jpg",
@@ -26,7 +28,8 @@ let videos = [
 	channeName: "Vox",
 	videoViews: "26M views",
 	videoDate: "2 years ago",
-	videoDuration: "19:54"
+	videoDuration: "19:54",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/illutions_of_time.jpg",
@@ -35,7 +38,8 @@ let videos = [
 	channeName: "Vsauce",
 	videoViews: "14M views",
 	videoDate: "1 years ago",
-	videoDuration: "31:08"
+	videoDuration: "31:08",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/how_films_work.jpg",
@@ -44,7 +48,8 @@ let videos = [
 	channeName: "SmarterEveryDay",
 	videoViews: "3.3M views",
 	videoDate: "1 years ago",
-	videoDuration: "31:08"
+	videoDuration: "31:08",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/japan_train.jpg",
@@ -53,7 +58,8 @@ let videos = [
 	channeName: "Solo Solo Travel",
 	videoViews: "3M views",
 	videoDate: "6 months ago",
-	videoDuration: "16:35"
+	videoDuration: "16:35",
+	channelVerification: ""
 },
 {
 	videoPreview: "img/video-previews/cheap_purchases.jpg",
@@ -62,7 +68,8 @@ let videos = [
 	channeName: "Ali Abdaal",
 	videoViews: "1.3M views",
 	videoDate: "1 months ago",
-	videoDuration: "9:08"
+	videoDuration: "9:08",
+	channelVerification: ""
 },
 {
 	videoPreview: "img/video-previews/liberal_hypocrisy.jpg",
@@ -71,7 +78,8 @@ let videos = [
 	channeName: "The New York Times",
 	videoViews: "7.7M views",
 	videoDate: "9 months ago",
-	videoDuration: "14:21"
+	videoDuration: "14:21",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/cicada_3301.jpg",
@@ -80,7 +88,8 @@ let videos = [
 	channeName: "LEMMINO",
 	videoViews: "29M views",
 	videoDate: "4 years ago",
-	videoDuration: "17:54"
+	videoDuration: "17:54",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/google_ceo.jpg",
@@ -89,7 +98,8 @@ let videos = [
 	channeName: "NothingButTech",
 	videoViews: "751K views",
 	videoDate: "3 months ago",
-	videoDuration: "9:41"
+	videoDuration: "9:41",
+	channelVerification: ""
 },
 {
 	videoPreview: "img/video-previews/google_maps.jpg",
@@ -98,7 +108,8 @@ let videos = [
 	channeName: "Wall Street Journal",
 	videoViews: "700K views",
 	videoDate: "5 days ago",
-	videoDuration: "8:42"
+	videoDuration: "8:42",
+	channelVerification: ""
 },
 {
 	videoPreview: "img/video-previews/blackrock.jpg",
@@ -107,7 +118,8 @@ let videos = [
 	channeName: "CNBC",
 	videoViews: "1.4M views",
 	videoDate: "10 months ago",
-	videoDuration: "14:19"
+	videoDuration: "14:19",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/hamming_codes.jpg",
@@ -116,7 +128,8 @@ let videos = [
 	channeName: "3Blue1Brown",
 	videoViews: "1.6M views",
 	videoDate: "1 year ago",
-	videoDuration: "20:05"
+	videoDuration: "20:05",
+	channelVerification: ""
 },
 {
 	videoPreview: "img/video-previews/china_keyboard.jpg",
@@ -125,7 +138,8 @@ let videos = [
 	channeName: "Johnny Harris",
 	videoViews: "2M views",
 	videoDate: "1 year ago",
-	videoDuration: "21:06"
+	videoDuration: "21:06",
+	channelVerification: "check_circle"
 },
 {
 	videoPreview: "img/video-previews/marques_sundar.jpg",
@@ -134,7 +148,8 @@ let videos = [
 	channeName: "Marques Brownlee",
 	videoViews: "4M views",
 	videoDate: "1 year ago",
-	videoDuration: "14:21"
+	videoDuration: "14:21",
+	channelVerification: "check_circle"
 }, 
 {
 	videoPreview: "img/video-previews/real_estate.jpg",
@@ -143,6 +158,7 @@ let videos = [
 	channeName: "Bedimcode",
 	videoViews: "121K views",
 	videoDate: "4 months ago",
-	videoDuration: "2:38:26"
-}, 
+	videoDuration: "2:38:26",
+	channelVerification: ""
+}
 ]
