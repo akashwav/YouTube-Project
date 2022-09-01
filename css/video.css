@@ -2,17 +2,18 @@
 
 main {
 	margin-top: 106px;
-	margin-left: 76px;
+	margin-left: 224px;
 	padding: 20px;
 	padding-bottom: 40px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	column-gap: 14px;
 	row-gap: 20px;
+	transition: 0.2;
 }
 
 .video-card {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	max-width: 350px;
@@ -76,9 +77,22 @@ main {
 
 }
 
+.channel-name-verified-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 8px;
+}
+
+.verified-icon {
+	font-size: 14px;
+	margin-left: 4px;
+	margin-bottom: 0px;
+	color: rgb(255, 255, 255, 0.7);
+}
+
 .channel-name {
 	font-size: 12px;
-	margin-top: 8px;
 	color: rgb(255, 255, 255, 0.6);
 }
 
@@ -99,7 +113,7 @@ main {
 }
 
 .more-info {
-	display: none;
+	opacity: 0;
 }
 
 .mobile-middot {

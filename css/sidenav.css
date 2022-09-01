@@ -48,3 +48,73 @@
 	font-size: 10px;
 	margin-top: 5px;
 }
+
+/* Main NavBar */
+
+#navbar {
+	position: fixed;
+	top: 53px;
+	background-color: rgb(33, 33, 33);
+	bottom: 0;
+	left: -100px;
+	z-index: 100;
+	margin-left: 100px;
+	overflow-y: scroll;
+	width: 224px;
+	
+}
+
+#navbar::-webkit-scrollbar {
+	width: 0;
+}
+
+
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-align: center;
+	padding: 7px 24px;
+	cursor: pointer;
+}
+
+.main-nav:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-nav-icon {
+	font-size: 26px;
+}
+
+.main-home-nav {
+	margin: 0;
+}
+
+.main-nav-text {
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 20px;
+}
+
+.default-main-nav {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navsets {
+	padding-bottom: 14px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	margin-top: 14px;
+}
+
+.first-navset {
+	margin-top: 10px;
+}
+
+.trademark {
+	display: flex;
+	margin-left: 26px;
+	align-items: center;
+	padding: 20px 0px;
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.6);
+}

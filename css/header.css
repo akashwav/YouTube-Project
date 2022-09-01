@@ -11,7 +11,7 @@ header {
 	justify-content: space-between;
 	padding: 6px 20px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-	z-index: 6;
+	z-index: 9;
 }
 
 .hamburger {
@@ -32,6 +32,10 @@ header {
 .hamburger:active {
 	background-color: rgba(255, 255, 255, 0.2);
 	border-color: rgba(255, 255, 255, 0.2);
+}
+
+#hamburger-icon-responsive {
+	display: none;
 }
 
 .menu-icon-wrap,
@@ -200,8 +204,6 @@ header {
 	display: flex;
 	margin-left: 8px;
 	cursor: pointer;
-	width: 32px;
-	overflow: none;
 }
 
 .profile-img img {
@@ -214,7 +216,7 @@ header {
 .interests {
 	position: fixed;
 	top: 53px;
-	left: 76px;
+	left: 224px;
 	right: 0px;
 	background-color: var(--dark-bgcolor-header);
 	padding: 10px 0px;
@@ -222,6 +224,7 @@ header {
 	align-items: center;
 	z-index: 5;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	transition: 0.2;
 }
 
 .interests-wrap {
