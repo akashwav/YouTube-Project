@@ -138,6 +138,10 @@
 		top: 55px;
 	}
 
+	.next_arrow {
+		display: none;
+	}
+
 	.interest-cards {
 		padding: 7px 14px;
 		font-size: 13px;

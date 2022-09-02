@@ -12,7 +12,8 @@ main {
 	transition: 0.2;
 }
 
-.video-card {
+.video-card,
+.video-card-page {
 	display: none;
 	flex-direction: column;
 	justify-content: center;
@@ -22,18 +23,22 @@ main {
 	cursor: pointer;
 }
 
-.video-preview {
+.video-preview,
+.video-preview-page {
 	position: relative;
 }
 
-.video-preview img {
+.video-preview img,
+.video-previewimg-page {
 	width: 100%;
 }
 
-.video-duration {
+.video-duration,
+.video-duration-page {
 	position: absolute;
 	bottom: 10px;
 	right: 6px;
+	user-select: none;
 	font-size: 12px;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.805);
@@ -42,61 +47,71 @@ main {
 	font-weight: 500;
 }
 
-.video-details {
+.video-details,
+.video-details-page {
 	display: flex;
 	flex-direction: row;
 	margin-top: 10px;
 }
 
-.channel-logo {
+.channel-logo,
+.channel-logo-page {
 	margin-right: 12px;
 }
 
-.channel-logo img {
+.channel-logo img,
+.channel-logoimg-page {
 	width: 38px;
 	height: 38px;
 	border-radius: 50%;
 }
 
-.video-info {
+.video-info,
+.video-info-page {
 	width: 80%;
 	display: flex;
 	flex-direction: column;
 }
 
-.video-title {
+.video-title,
+.video-title-page {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 20px;
 }
 
-.video-name-stats-wrap {
+.video-name-stats-wrap,
+.video-name-stats-wrap-page {
 	display: flex;
 	flex-direction: column;
 	white-space: nowrap;
 
 }
 
-.channel-name-verified-wrap {
+.channel-name-verified-wrap,
+.channel-name-verified-wrap-page {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	margin-top: 8px;
 }
 
-.verified-icon {
+.verified-icon,
+.verified-icon-page {
 	font-size: 14px;
 	margin-left: 4px;
 	margin-bottom: 0px;
 	color: rgb(255, 255, 255, 0.7);
 }
 
-.channel-name {
+.channel-name,
+.channel-name-page {
 	font-size: 12px;
 	color: rgb(255, 255, 255, 0.6);
 }
 
-.video-stats-wrap {
+.video-stats-wrap,
+.video-stats-wrap-page {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -107,15 +122,166 @@ main {
 
 .video-views,
 .global-middot,
-.video-date {
+.video-date,
+.video-views-page,
+.global-middot-page,
+.video-date-page {
 	font-size: 12px;
 	color: rgb(255, 255, 255, 0.6);
 }
 
-.more-info {
+.more-info,
+.more-info-page {
 	opacity: 0;
 }
 
-.mobile-middot {
+.mobile-middot,
+.mobile-middot-page {
 	display: none;
+}
+
+/* Video Page */
+
+.video-page {
+	margin-top: 80px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.main-video-wrap {
+	display: flex;
+	flex-direction: column;
+	max-width: 730px;
+	width: 100%;
+	height: 100%;
+}
+
+.video-frame {
+	padding-bottom: 18px;
+	border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.video_page-title {
+	margin-top: 18px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.video_page-views {
+	font-size: 14px;
+    	color: rgb(255,255,255, 0.6);
+}
+
+.video-channel-page {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 0px;	
+}
+
+.channel_page-section {
+	display: flex;
+	align-items: center;	
+}
+
+.channel_page-logo {
+	width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.channel_page-name-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 16px;
+}
+
+.name-verification-page-wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+.channel_page-name {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.subscribers {
+	font-size: 12px;
+	margin-top: 4px;
+	color: rgb(255, 255, 255, 0.7);
+}
+
+.button-notification {
+	display: flex;
+	align-items: center;	
+}
+
+.subscribe-btn {
+	width: 95px;
+	height: 35px;
+	border-radius: 20px;
+	background-color: rgb(204, 0, 0);
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	font-weight: 500;
+	font-size: 14px;	
+}
+
+.notification-icon-page {
+	margin: 0px 12px;
+}
+
+.main-video-sidebar-wrap {
+	position: relative;
+	padding-top: 60px;
+	margin-left: -80px;
+}
+
+.interests-page {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 60px;
+	background-color: transparent;
+	border-bottom: none;
+}
+
+.default-interest-page {
+	margin-left: 0;
+}
+
+.video-card-page {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	max-width: 380px;
+	height: max-content;
+	justify-content: flex-start;
+	padding-bottom: 4px;
+}
+
+.video-preview-page {
+	height: 97px;
+}
+
+.video-previewimg-page {
+	width: 164px;
+}
+
+.video-details-page {
+	margin: 0;
+	margin-left: 8px;
+}
+
+.video-info-page {
+	width: 100%;
 }

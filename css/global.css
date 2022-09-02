@@ -7,6 +7,14 @@
 	padding: 0px;
 	font-family: 'Roboto';
 	color: white;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Temp */
+
+.video-page
+{
+	display: none !important;
 }
 
 img,
@@ -15,10 +23,6 @@ img,
 	user-select: none;
 	-webkit-user-drag: none;
 
-}
-
--webkit-tap-highlight-color{
-	  background-color: transparent; 
 }
 
 body {

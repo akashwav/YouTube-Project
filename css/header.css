@@ -202,7 +202,6 @@ header {
 
 .profile-img {
 	display: flex;
-	margin-left: 8px;
 	cursor: pointer;
 }
 
@@ -213,7 +212,8 @@ header {
 
 /* Header Sticky || Interest */
 
-.interests {
+.interests,
+.interests-page {
 	position: fixed;
 	top: 53px;
 	left: 224px;
@@ -225,12 +225,36 @@ header {
 	z-index: 5;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	transition: 0.2;
+	overflow: hidden;
+}
+
+.back_arrow,
+.next_arrow {
+	font-size: 16px;
+	position: absolute;
+	padding: 17px 0px;
+	padding-left: 20px;
+	width: 40px;
+	display: none;
+	background: var(--dark-bgcolor-header);
+	align-content: center;
+	justify-content: center;
+	box-shadow: 20px 0px 12px var(--dark-bgcolor-header);
+	cursor: pointer;
 }
 
 .interests-wrap {
 	display: flex;
 	overflow-x: scroll;
 	align-items: center;
+	transition: 0.5s;
+}
+
+.next_arrow {
+	display: flex;
+	right: 0;
+	margin-right: -2;
+	transform: rotate(180deg);
 }
 
 .interests-wrap::-webkit-scrollbar {
