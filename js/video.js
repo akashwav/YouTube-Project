@@ -2,23 +2,23 @@
 
 let videos = [
 	{
-	videoPreview: "img/video-previews/the_galaxy_of_iphone.jpg",
+	videoPreview: "img/video-previews/airpods_max.jpg",
 	channelLogo: "img/channel-logo/marques-brownlee.jpg",
-	videoTitle: "Galaxy S22 Review: The iPhone of Android!",
+	videoTitle: "AirPods Max Unboxing & Impressions: $550?!",
 	channeName: "Marques Brownlee",
-	videoViews: "5.8M views",
-	videoDate: "6 months ago",
-	videoDuration: "13:34",
+	videoViews: "12M views",
+	videoDate: "1 year ago",
+	videoDuration: "11:52",
 	channelVerification: "check_circle"
 }, 
 {
-	videoPreview: "img/video-previews/farenheit-veritasium.jpg",
+	videoPreview: "img/video-previews/bike_veritasium.jpg",
 	channelLogo: "img/channel-logo/veritasium.jpg",
-	videoTitle: "What the Fahrenheit?!",
+	videoTitle: "Most People Don't Know How Bikes Work",
 	channeName: "Veritasium",
-	videoViews: "5.1M views",
-	videoDate: "5 years ago",
-	videoDuration: "5:24",
+	videoViews: "18M views",
+	videoDate: "9 monthss ago",
+	videoDuration: "11:22",
 	channelVerification: "check_circle"
 },
 {

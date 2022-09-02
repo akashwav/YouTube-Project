@@ -68,9 +68,13 @@ headerRight.addEventListener('click', () => {
 	}
 })
 
-// Interest Card Hover $ Selection Styles
+// Interest Card Hover $ Selection Styles & Arrow
 
+let topicMain = document.getElementsByClassName('interests')[0];
 let topics = Array.from(document.getElementsByClassName('interest-cards'));
+let topicsWrap = document.getElementsByClassName('interests-wrap')[0];
+let backArrow = document.getElementById('back-arrow');
+let nextArrow = document.getElementById('next-arrow');
 
 topics.forEach((eachTopic) => {
 	eachTopic.addEventListener('click', (selection) => {
@@ -82,8 +86,38 @@ topics.forEach((eachTopic) => {
 		}); searchReset();
 		selected = selection.target;
 		selected.classList.add("selected-interest");
-	})
+	});
 });
+
+let screenWidth = screen.width;
+
+topicsWrap.addEventListener('scroll', ()=> {
+	if (screenWidth > 550) {
+		if (topicsWrap.scrollLeft > 0) {
+			backArrow.style.display = 'flex';
+			nextArrow.style.display = 'none';
+		}
+		else {
+			backArrow.style.display = 'none';
+			nextArrow.style.display = 'flex';
+		}
+	}
+	else {
+		nextArrow.style.display = 'none';
+		backArrow.style.display = 'none';
+	}
+});
+
+backArrow.addEventListener('click', ()=> {
+	let scrollValue = parseInt(topicsWrap.scrollLeft);
+	topicsWrap.scrollLeft = scrollValue - 100;
+});
+
+nextArrow.addEventListener('click', ()=> {
+	let scrollValue = parseInt(topicsWrap.scrollLeft);
+	topicsWrap.scrollLeft = scrollValue + 100;
+});
+
 
 // SideNav Selection Styles
 
