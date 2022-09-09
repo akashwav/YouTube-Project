@@ -12,6 +12,7 @@ header {
 	padding: 6px 20px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	z-index: 9;
+	overflow: hidden;
 }
 
 .hamburger {

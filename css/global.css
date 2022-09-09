@@ -10,12 +10,17 @@
 	-webkit-tap-highlight-color: transparent;
 }
 
-/* Temp */
-
-.video-page
-{
-	display: none !important;
+html {
+	overflow-x: hidden;
 }
+
+/* Utility Classes */
+
+.display-none {
+	display: none;
+}
+
+/* Temp */
 
 img,
 .material-symbols-outlined,
@@ -28,6 +33,7 @@ img,
 body {
 	background-color: var(--dark-bgcolor-body);
 	position: relative;
+	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -39,6 +45,7 @@ body {
 	border-radius: 10px;
 	background-color: rgba(130, 130, 130, 0.6);
 }
+
 
 /* Global Variables */
 
