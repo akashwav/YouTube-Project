@@ -9,7 +9,14 @@ setInterval(() => {
 
 // Rating Timeout
 
+// Screen Width Fix
 
+window.onload = function () {
+        if (window.innerWidth <= 400) {
+          var mvp = document.getElementById("myViewport");
+          mvp.setAttribute("content", "width = 400");
+        }
+};
 
 // SearchBar Active Styles
 
@@ -161,6 +168,7 @@ videoCard.forEach((videoCards, i) => {
 	verifiedIcon[i].innerText = videos[i].channelVerification;
 });
 
+
 // Hamburger Icon & NavBar Open
 
 let menuBtn = document.getElementById('hamburger-icon');
@@ -181,7 +189,6 @@ menuBtn.addEventListener('click', () => {
 		mainContent.style.marginLeft = '76px';
 		mainNavBar.style.left = '-350px'
 	}
-	console.log('clicked')
 });
 menuBtnResponsive.addEventListener('click', () => {
 	if (mainNavBar.style.left == '-350px') {
@@ -221,10 +228,102 @@ mainNavIcon.forEach((mainNavIcons, i) => {
 			mainNavIcons.classList.remove('material-symbols-outlined');
 			mainNavIcons.classList.add('material-symbols-rounded');
 		}
-		console.log(selected);
 
 	});
 });
+
+// Video Page Appearance
+
+let videoPage = document.getElementsByClassName('video-page')[0];
+let sideNavFixed = document.getElementsByClassName('sidenav')[0];
+let youtubeIcon = document.getElementById('youtube');
+
+videoCard.forEach(videoCards => {
+	videoCards.addEventListener('click', ()=> {
+		videoPage.style.right = 'unset';
+		mainNavBar.style.left = '-350px';
+		sideNavFixed.style.display = 'none';
+		mainContent.classList.add('display-none');
+		topicMain.style.display = 'none';
+	})
+	youtubeIcon.addEventListener('click', ()=> {
+		if (screenWidth <= 550) {
+			mainNavBar.style.left = '-350px';
+		}
+		else {
+			mainNavBar.style.left = '-100px';
+		}
+		videoPage.style.right = '-300%';
+		sideNavFixed.style.display = 'flex';
+		mainContent.classList.remove('display-none');
+		topicMain.style.display = 'flex';
+	});
+});
+
+// Video Page Data Entry 
+
+let videoTitlePage = document.getElementsByClassName('video_page-title')[0];
+let videoSource = document.getElementById('video-source');
+let videoViewsPage = document.getElementsByClassName('video_page-view-ex')[0];
+let channelIconPage = document.getElementsByClassName('channel_page-logo')[0];
+let channelNamePage = document.getElementsByClassName('channel_page-name')[0];
+let channelSubsPage = document.querySelector('.subscribers-n');
+let channelVerificationPage = document.querySelector('.verification-tick');
+let likesCountPage = document.querySelector('.contols-text');
+
+videoCard.forEach((videoCards, index) => {
+	videoCard[index].index = index;
+	videoCards.addEventListener('click', (e)=> {
+		videoIndex = e.target.index;
+		for (let i = 0; i < videos.length; i++) {
+			const videoData = videos[i];
+			if (videoIndex == videoData.index) {
+				videoCurrent = videoData.videoTitle;
+				videoTitlePage.innerText = videoData.videoTitle;
+				videoSource.src = videoData.iframe;
+				videoViewsPage.innerText = videoData.videoViewsEx;
+				channelIconPage.src = videoData.channelLogo;
+				channelNamePage.innerText = videoData.channeName;
+				channelSubsPage.innerText = videoData.channelSubs;
+				channelVerificationPage.innerText = videoData.channelVerification;
+				likesCountPage.innerText = videoData.likesCount;
+			};
+		};
+	});
+});
+
+let channelIconSide = document.querySelectorAll('.channel-logoimg-page');
+let videoPreviewSide = document.querySelectorAll('.video-previewimg-page');
+let videoCardSide = document.querySelectorAll('.video-card-page');
+let videoTitleSide = document.querySelectorAll('.video-title-page');
+let channelNameSide = document.querySelectorAll('.channel-name-page');
+let videoViewSide = document.querySelectorAll('.video-views-page');
+let videoDateSide = document.querySelectorAll('.video-date-page');
+let videoDurationSide = document.querySelectorAll('.video-duration-page');
+let verifiedIconSide = document.querySelectorAll('.verified-icon-page');
+
+videoCardSide.forEach((sideVideoCards, i) => {
+	sideVideoCards.style.display = 'flex';
+	videoPreviewSide[i].src = videosPage[i].videoPreview;
+	channelIconSide[i].src = videosPage[i].channelLogo;
+	videoTitleSide[i].innerText = videosPage[i].videoTitle;
+	channelNameSide[i].innerText = videosPage[i].channeName;
+	videoViewSide[i].innerText = videosPage[i].videoViews;
+	videoDateSide[i].innerText = videosPage[i].videoDate;
+	videoDurationSide[i].innerText = videosPage[i].videoDuration;
+	verifiedIconSide[i].innerText = videosPage[i].channelVerification;
+});
+
+let subBtnPage = document.getElementsByClassName('subscribe-btn')[0];
+
+if (screenWidth <= 550) {
+	subBtnPage.innerText = 'SUBSCRIBE';
+}
+
+else{
+	subBtnPage.innerText = 'Subscribe';
+}
+
 
 // Experimental
 
