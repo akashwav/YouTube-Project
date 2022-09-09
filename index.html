@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="myViewport" name="viewport" content="width=device-width" user-scalable="no"/>
     <script
       src="https://kit.fontawesome.com/c72fbd3cfe.js"
       crossorigin="anonymous"
@@ -41,7 +41,11 @@
           menu
         </div>
         <div class="youtube-logo">
-          <img src="img/others/youtube-logo.png" alt="YouTube Logo" />
+          <img
+            src="img/others/youtube-logo.png"
+            id="youtube"
+            alt="YouTube Logo"
+          />
         </div>
       </section>
       <section class="searchbar-mic-wrap">
@@ -89,7 +93,9 @@
     </header>
 
     <section class="interests">
-      <div id="back-arrow" class="back_arrow material-symbols-outlined">arrow_back_ios</div>
+      <div id="back-arrow" class="back_arrow material-symbols-outlined">
+        arrow_back_ios
+      </div>
       <div class="interests-wrap">
         <div
           class="explore-interest material-symbols-outlined default-interest"
@@ -117,7 +123,9 @@
         <div class="interest-cards">Apple</div>
         <div class="interest-cards">Recently Uploaded</div>
       </div>
-      <div id="next-arrow" class="next_arrow material-symbols-outlined">arrow_back_ios</div>
+      <div id="next-arrow" class="next_arrow material-symbols-outlined">
+        arrow_back_ios
+      </div>
     </section>
 
     <section class="sidenav">
@@ -628,53 +636,153 @@
     <section class="video-page">
       <section class="main-video-wrap">
         <div class="video-frame">
-          <iframe src="https://www.youtube.com/embed/daaDuC1kbds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <div class="video_page-title">World's Highest Jumping Robot</div>
+          <div class="iframe-container">
+            <iframe
+              id="video-source"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video_page-title"></div>
           <div class="views-controls-wrap">
-          <span class="video_page-views">2,354,889 views</span>
-        </div>
-        </div>
-        <div class="video-channel-page">
-        <div class="channel_page-section">
-          <img src="img/channel-logo/veritasium.jpg" alt="" class="channel_page-logo">
-          <div class="channel_page-name-wrap">
-            <div class="name-verification-page-wrap">
-            <span class="channel_page-name">Veritasium</span>
-            <span class="verification-tick"></span>
+            <div class="views-date-wrap">
+              <pre
+                class="video_page-views"
+              ><span class="video_page-view-ex"></span> views</pre>
+              <pre class="middot-page"> &middot; </pre>
+              <span class="date-added-page">1y ago</span>
             </div>
-            <div class="subscribers">12.8M subscribers</div>
+            <div class="video-controls-page-wrap">
+              <div class="video-controls-page">
+                <div class="video-controls first-page-nav default-page-nav">
+                  <span class="controls-icon material-symbols-outlined"
+                    >thumb_up</span
+                  >
+                  <span class="contols-text likes-count"></span>
+                </div>
+                <div class="video-controls">
+                  <span class="controls-icon material-symbols-outlined"
+                    >thumb_down</span
+                  >
+                  <span class="contols-text">DISLIKE</span>
+                </div>
+                <div class="video-controls">
+                  <span class="controls-icon material-symbols-outlined"
+                    >share</span
+                  >
+                  <span class="contols-text">SHARE</span>
+                </div>
+                <div class="video-controls">
+                  <span class="controls-icon material-symbols-outlined"
+                    >download</span
+                  >
+                  <span class="contols-text">DOWNLOAD</span>
+                </div>
+                <div class="video-controls">
+                  <span class="controls-icon material-symbols-outlined"
+                    >playlist_add</span
+                  >
+                  <span class="contols-text">SAVE</span>
+                </div>
+                <div class="video-controls">
+                  <span
+                    class="controls-icon vert-control material-symbols-outlined"
+                    >more_vert</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="button-notification">
-          <button class="subscribe-btn">Subscribe</button>
-          <div class="notification-icon-page material-symbols-outlined">notifications</div>
+        <div class="video-channel-page">
+          <div class="channel_page-section">
+            <img alt="" class="channel_page-logo" />
+            <div class="channel_page-name-wrap">
+              <div class="name-verification-page-wrap">
+                <span class="channel_page-name"></span>
+                <span class="verification-tick material-symbols-rounded"></span>
+              </div>
+              <pre
+                class="subscribers"
+              ><span class="subscribers-n"></span> subscribers</pre>
+            </div>
+          </div>
+          <div class="button-notification">
+            <button class="subscribe-btn">Subscribe</button>
+            <div class="notification-icon-page material-symbols-outlined">
+              notifications
+            </div>
+          </div>
         </div>
+        <div class="video-comments-page">
+          <div class="total-comments-sort">
+            <pre
+              class="total-comments"
+            ><span class="total-comments-n">46,859</span> Comments</pre>
+            <div class="sort-comments">
+              <span class="sort-icon material-symbols-outlined">sort</span>
+              <span class="sort-text">SORT BY</span>
+            </div>
+          </div>
+          <div class="add-comment-wrap">
+            <img
+              src="img/others/profile_pfp.jpg"
+              alt=""
+              class="user-icon-comment"
+            />
+            <div class="input-cover-page">
+              <input
+                placeholder="Add a Comment..."
+                type="text"
+                name=""
+                class="input-addcomment"
+              />
+            </div>
+          </div>
         </div>
       </section>
       <section class="main-video-sidebar-wrap">
         <section class="interests-page">
-          <div id="back-arrow" class="back_arrow material-symbols-outlined">arrow_back_ios</div>
+          <div id="back-arrow" class="back_arrow material-symbols-outlined">
+            arrow_back_ios
+          </div>
           <div class="interests-wrap">
             <div class="interest-cards selected-interest default-interest-page">All</div>
             <div class="interest-cards">Computer Science</div>
             <div class="interest-cards">Physics</div>
             <div class="interest-cards">Calculus</div>
             <div class="interest-cards">Computer Science</div>
+            <div class="interest-cards">Calculus</div>
           </div>
-          <div id="next-arrow" class="next_arrow material-symbols-outlined">arrow_back_ios</div>
+          <div id="next-arrow" class="next_arrow material-symbols-outlined">
+            arrow_back_ios
+          </div>
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
@@ -689,16 +797,27 @@
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
@@ -713,16 +832,27 @@
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
@@ -737,16 +867,27 @@
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
@@ -761,16 +902,27 @@
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
@@ -785,16 +937,27 @@
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
@@ -809,16 +972,62 @@
         </section>
         <section class="video-card-page">
           <div class="video-preview-page">
-            <img class="video-previewimg-page" src="img/video-previews/bike_veritasium.jpg" alt="" />
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
             <span class="video-duration-page">13:01</span>
           </div>
           <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
             <div class="video-info-page">
-              <p class="video-title-page">Most People Don't Know How Bikes Work</p>
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
               <div class="video-name-stats-wrap-page">
                 <div class="channel-name-verified-wrap-page">
                   <span class="channel-name-page">Veritasium</span>
-                  <span class="verified-icon-page material-symbols-rounded">check_circle</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
+                </div>
+                <div class="video-stats-wrap-page">
+                  <pre class="mobile-middot-page"> &middot; </pre>
+                  <span class="video-views-page">18M views</span>
+                  <pre class="global-middot-page"> &middot; </pre>
+                  <span class="video-date-page">9 months ago</span>
+                </div>
+              </div>
+            </div>
+            <div class="more-info-page material-symbols-rounded">more_vert</div>
+          </div>
+        </section>
+        <section class="video-card-page">
+          <div class="video-preview-page">
+            <img
+              class="video-previewimg-page"
+              src="img/video-previews/bike_veritasium.jpg"
+              alt=""
+            />
+            <span class="video-duration-page">13:01</span>
+          </div>
+          <div class="video-details-page">
+            <div class="channel-logo-page">
+              <img class="channel-logoimg-page" alt="" />
+            </div>
+            <div class="video-info-page">
+              <p class="video-title-page">
+                Most People Don't Know How Bikes Work
+              </p>
+              <div class="video-name-stats-wrap-page">
+                <div class="channel-name-verified-wrap-page">
+                  <span class="channel-name-page">Veritasium</span>
+                  <span class="verified-icon-page material-symbols-rounded"
+                    >check_circle</span
+                  >
                 </div>
                 <div class="video-stats-wrap-page">
                   <pre class="mobile-middot-page"> &middot; </pre>
