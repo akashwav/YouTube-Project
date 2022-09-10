@@ -9,7 +9,8 @@ main {
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	column-gap: 14px;
 	row-gap: 20px;
-	transition: 0.2;
+	transition: 1s;
+	position: relative;
 }
 
 .video-card,
@@ -22,6 +23,12 @@ main {
 	cursor: pointer;
 	padding-bottom: 20px;
 	pointer-events: all;
+	transition: 1s;
+}
+
+.video-card:active,
+.video-card-page:active {
+	background-color: rgb(255, 255, 255, 0.3);
 }
 
 .video-preview,
@@ -153,13 +160,16 @@ main {
 /* Video Page */
 
 .video-page {
-	margin-top: 80px;
 	display: flex;
 	padding: 0px 20px;
 	flex-direction: row;
 	justify-content: center;
-	position: relative;
-	right: -300%;
+	position: absolute;
+	top: -1000vh;
+	right: 0;
+	left: 0;
+	background-color: var(--dark-bgcolor-body);
+	transition: 0.5s;
 }
 
 .main-video-wrap {
