@@ -9,6 +9,8 @@ setInterval(() => {
 
 // Rating Timeout
 
+
+
 // Screen Width Fix
 
 window.onload = function () {
@@ -240,22 +242,31 @@ let youtubeIcon = document.getElementById('youtube');
 
 videoCard.forEach(videoCards => {
 	videoCards.addEventListener('click', ()=> {
-		videoPage.style.right = 'unset';
+		window.scrollTo(0, 0);
+		if (screenWidth <= 550) {
+			videoPage.style.top = '58px';
+		}
+		else {
+			videoPage.style.top = '78px';
+		}
+		
 		mainNavBar.style.left = '-350px';
 		sideNavFixed.style.display = 'none';
-		mainContent.classList.add('display-none');
+		mainContent.style.opacity = 0;
+		mainContent.style.top = '-1000vh';
 		topicMain.style.display = 'none';
 	})
 	youtubeIcon.addEventListener('click', ()=> {
+		mainContent.style.top = 'unset';
 		if (screenWidth <= 550) {
 			mainNavBar.style.left = '-350px';
 		}
 		else {
 			mainNavBar.style.left = '-100px';
 		}
-		videoPage.style.right = '-300%';
+		videoPage.style.top = '-1000vh';
 		sideNavFixed.style.display = 'flex';
-		mainContent.classList.remove('display-none');
+		mainContent.style.opacity = 1;
 		topicMain.style.display = 'flex';
 	});
 });
@@ -270,6 +281,7 @@ let channelNamePage = document.getElementsByClassName('channel_page-name')[0];
 let channelSubsPage = document.querySelector('.subscribers-n');
 let channelVerificationPage = document.querySelector('.verification-tick');
 let likesCountPage = document.querySelector('.contols-text');
+let dateAddedPage = document.querySelector('.date-added-page');
 
 videoCard.forEach((videoCards, index) => {
 	videoCard[index].index = index;
@@ -287,6 +299,7 @@ videoCard.forEach((videoCards, index) => {
 				channelSubsPage.innerText = videoData.channelSubs;
 				channelVerificationPage.innerText = videoData.channelVerification;
 				likesCountPage.innerText = videoData.likesCount;
+				dateAddedPage.innerText = videoData.videoDate;
 			};
 		};
 	});
@@ -338,4 +351,3 @@ else{
 // 		header.style.padding = '10px';
 // 	}
 // }
-
