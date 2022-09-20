@@ -23,7 +23,7 @@ main {
 	cursor: pointer;
 	padding-bottom: 20px;
 	pointer-events: all;
-	transition: 1s;
+	transition: 0.5s;
 }
 
 .video-card:active,
@@ -288,19 +288,39 @@ iframe {
 }
 
 .subscribe-btn {
-	width: 95px;
-	height: 35px;
-	border-radius: 20px;
+	cursor: pointer;
+	width: 110px;
+	height: 40px;
+	border-radius: 3px;
+	margin-right: 12px;
 	background-color: rgb(204, 0, 0);
 	text-align: center;
 	vertical-align: middle;
 	border: none;
 	font-weight: 500;
 	font-size: 14px;
+	transition: 0.5s;
 }
 
 .notification-icon-page {
-	margin: 0px 12px;
+	margin: 0px;
+	margin-right: 12px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border: 1px solid transparent;
+	transition: 0.2s;
+	display: none;
+	cursor: pointer;
+}
+
+.notification-icon-page:active {
+	border: 1px solid rgb(255, 255, 255, 0.1);
+	background-color: rgb(255, 255, 255, 0.1);
 }
 
 .main-video-sidebar-wrap {
@@ -446,10 +466,3 @@ iframe {
 	font-weight: 500;
 	color: rgb(255, 255, 255, 0.5);
 }
-
-
-
-
-
-
-
