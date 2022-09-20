@@ -60,7 +60,7 @@ body {
 
 #splash-screen {
 	pointer-events: none;
-	z-index: 1000;
+	z-index: 1001;
 	position: fixed;
 	top: 0;
 	bottom: 0;
