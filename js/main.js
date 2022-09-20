@@ -7,17 +7,29 @@ setInterval(() => {
 	splashScreen.style.opacity = '0';
 }, 5000);
 
+setTimeout(() => {
+	document.body.style.overflow = 'hidden';
+}, 5000);
+
 // Rating Timeout
 
-
+for (let i = 0; i < videos.length; i++) {
+	const vidoesData = videos[i];
+	let name = 'Idontwajjnttogothere';
+	console.log(name[2]);
+	for (let j = 0; j < name.length; j++) {
+		const nameW = name[j];
+		console.log('Hello');
+	}
+}
 
 // Screen Width Fix
 
 window.onload = function () {
-        if (window.innerWidth <= 400) {
-          var mvp = document.getElementById("myViewport");
-          mvp.setAttribute("content", "width = 400");
-        }
+	if (window.innerWidth <= 400) {
+		var mvp = document.getElementById("myViewport");
+		mvp.setAttribute("content", "width = 400");
+	}
 };
 
 // SearchBar Active Styles
@@ -100,7 +112,7 @@ topics.forEach((eachTopic) => {
 
 let screenWidth = screen.width;
 
-topicsWrap.addEventListener('scroll', ()=> {
+topicsWrap.addEventListener('scroll', () => {
 	if (screenWidth > 550) {
 		if (topicsWrap.scrollLeft > 0) {
 			backArrow.style.display = 'flex';
@@ -117,12 +129,12 @@ topicsWrap.addEventListener('scroll', ()=> {
 	}
 });
 
-backArrow.addEventListener('click', ()=> {
+backArrow.addEventListener('click', () => {
 	let scrollValue = parseInt(topicsWrap.scrollLeft);
 	topicsWrap.scrollLeft = scrollValue - 100;
 });
 
-nextArrow.addEventListener('click', ()=> {
+nextArrow.addEventListener('click', () => {
 	let scrollValue = parseInt(topicsWrap.scrollLeft);
 	topicsWrap.scrollLeft = scrollValue + 100;
 });
@@ -198,11 +210,20 @@ menuBtnResponsive.addEventListener('click', () => {
 		mainContent.style.marginLeft = '0px';
 		mainNavBar.style.left = '-100px'
 		mainNavBar.style.top = '47px'
+		if (screenWidth <= 550) {
+			sideNavFixed.style.display = 'none';
+			mainNavBar.style.top = '52px'
+		}
+
 	}
 	else {
 		mainNavBar.style.left = '-350px'
 		headerScroll.style.left = '0px';
 		mainContent.style.marginLeft = '0px';
+		if (sideNavFixed.style.display == 'none') {
+			sideNavFixed.style.display = 'flex';
+			mainNavBar.style.top = '52px'
+		}
 	}
 });
 
@@ -226,11 +247,12 @@ mainNav.forEach(mainNavs => {
 mainNavIcon.forEach((mainNavIcons, i) => {
 	mainNavIcons.addEventListener("click", (selection) => {
 		selected = selection.target;
-		if (mainNavIcons.classList.contains('material-symbols-outlined')) {
-			mainNavIcons.classList.remove('material-symbols-outlined');
-			mainNavIcons.classList.add('material-symbols-rounded');
-		}
-
+		mainNavIcon.forEach(mainNavIconsT => {
+			if (mainNavIconsT.classList.contains('material-symbols-rounded')) {
+				mainNavIconsT.classList.remove('material-symbols-rounded');
+			}
+		});
+		mainNavIcons.classList.add('material-symbols-rounded');
 	});
 });
 
@@ -238,37 +260,66 @@ mainNavIcon.forEach((mainNavIcons, i) => {
 
 let videoPage = document.getElementsByClassName('video-page')[0];
 let sideNavFixed = document.getElementsByClassName('sidenav')[0];
+let homeFooter = document.getElementsByClassName('default-sidenav')[0];
 let youtubeIcon = document.getElementById('youtube');
 
 videoCard.forEach(videoCards => {
-	videoCards.addEventListener('click', ()=> {
+	videoCards.addEventListener('click', () => {
 		window.scrollTo(0, 0);
 		if (screenWidth <= 550) {
 			videoPage.style.top = '58px';
+			sideNavFixed.style.display = 'flex';
+			sideNavIcon.forEach(ifAnySideNavIcon => {
+				if (ifAnySideNavIcon.classList.contains('material-symbols-rounded')) {
+					ifAnySideNavIcon.classList.add('material-symbols-outlined');
+					ifAnySideNavIcon.classList.remove('material-symbols-rounded');
+				}
+				sideNavIcon[5].classList.add('material-symbols-rounded');
+			});
 		}
 		else {
-			videoPage.style.top = '78px';
+			videoPage.style.top = '60px';
+			if (screenWidth > 550) {
+				sideNavFixed.style.display = 'none';
+			}
+			else {
+				sideNavFixed.style.display = 'flex';
+
+			}
 		}
-		
 		mainNavBar.style.left = '-350px';
-		sideNavFixed.style.display = 'none';
 		mainContent.style.opacity = 0;
 		mainContent.style.top = '-1000vh';
 		topicMain.style.display = 'none';
 	})
-	youtubeIcon.addEventListener('click', ()=> {
+	function pageToMain() {
 		mainContent.style.top = 'unset';
+		videoSource.src = videoSource.src;
 		if (screenWidth <= 550) {
 			mainNavBar.style.left = '-350px';
+
+			sideNavIcon.forEach(ifAnySideNavIcon => {
+				if (ifAnySideNavIcon.classList.contains('material-symbols-rounded')) {
+					ifAnySideNavIcon.classList.add('material-symbols-outlined');
+					ifAnySideNavIcon.classList.remove('material-symbols-rounded');
+				}
+				sideNavIcon[0].classList.add('material-symbols-rounded');
+			});
 		}
 		else {
 			mainNavBar.style.left = '-100px';
 		}
+
 		videoPage.style.top = '-1000vh';
-		sideNavFixed.style.display = 'flex';
 		mainContent.style.opacity = 1;
 		topicMain.style.display = 'flex';
+	}
+	youtubeIcon.addEventListener('click', () => {
+		pageToMain();
 	});
+	homeFooter.addEventListener('click', () => {
+		pageToMain();
+	})
 });
 
 // Video Page Data Entry 
@@ -285,7 +336,7 @@ let dateAddedPage = document.querySelector('.date-added-page');
 
 videoCard.forEach((videoCards, index) => {
 	videoCard[index].index = index;
-	videoCards.addEventListener('click', (e)=> {
+	videoCards.addEventListener('click', (e) => {
 		videoIndex = e.target.index;
 		for (let i = 0; i < videos.length; i++) {
 			const videoData = videos[i];
@@ -328,14 +379,40 @@ videoCardSide.forEach((sideVideoCards, i) => {
 });
 
 let subBtnPage = document.getElementsByClassName('subscribe-btn')[0];
+let bellIconPage = document.querySelector('.notification-icon-page');
 
-if (screenWidth <= 550) {
-	subBtnPage.innerText = 'SUBSCRIBE';
-}
+subBtnPage.addEventListener('click', () => {
+	if (subBtnPage.style.backgroundColor == 'rgb(204, 0, 0)') {
+		subBtnPage.style.backgroundColor = 'rgb(255, 255, 255, 0.1)';
+		subBtnPage.style.color = 'rgb(255, 255, 255, 0.7)';
+		subBtnPage.innerText = 'SUBSCRIBED';
+		bellIconPage.style.display = 'flex';
+	}
 
-else{
-	subBtnPage.innerText = 'Subscribe';
-}
+	else {
+		subBtnPage.style.backgroundColor = 'rgb(204, 0, 0)';
+		subBtnPage.style.color = 'rgb(255, 255, 255, 1)';
+		subBtnPage.innerText = 'SUBSCRIBE';
+		bellIconPage.style.display = 'none';
+		bellIconPage.innerText = 'notifications';
+		bellIconPage.classList.remove('material-symbols-rounded');
+		bellIconPage.classList.add('material-symbols-outlined');
+	}
+})
+
+bellIconPage.addEventListener('click', () => {
+	if (bellIconPage.classList.contains('material-symbols-outlined')) {
+		bellIconPage.innerText = 'notifications_active';
+		bellIconPage.classList.remove('material-symbols-outlined');
+		bellIconPage.classList.add('material-symbols-rounded');
+	}
+	else {
+		bellIconPage.innerText = 'notifications_off';
+		bellIconPage.classList.remove('material-symbols-rounded');
+		bellIconPage.classList.add('material-symbols-outlined');
+	}
+
+})
 
 
 // Experimental
